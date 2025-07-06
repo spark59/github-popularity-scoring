@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# Testing
+htmlcov/
+.tox/
+.pytest_cache/
+coverage.xml
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
