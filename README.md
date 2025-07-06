@@ -18,7 +18,7 @@ This service fetches repositories from GitHub, scores them based on popularity m
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/sangwookpark/redcare-github-popularity-scoring-service.git
+   git clone https://github.com/spark59/github-popularity-scoring.git
    cd redcare-github-popularity-scoring-service
    ```
 2. **Install dependencies:**
@@ -31,7 +31,7 @@ This service fetches repositories from GitHub, scores them based on popularity m
    ```env
    GITHUB_TOKEN=your_github_token
     ```
-4. **Run the service:**
+## **Run the service:**
     ```sh
     make run
     ```
@@ -40,3 +40,15 @@ This service fetches repositories from GitHub, scores them based on popularity m
     ```sh
     make test
     ```
+
+## Usage
+You can use the service by sending a GET request to the `/search` endpoint with the following
+query parameters:
+- `language`: The programming language to filter repositories (e.g., `python`, `javascript`)
+- `earliest_created_date`: The date from which to filter repositories (format: `YYYY-MM-DD`)
+- `page`: The page number for pagination (default: `1`)
+- `per_page`: The number of repositories per page (default: `100`)
+Example request:
+```sh
+curl "http://localhost:8000/search?language=python&earliest_created_date=2023-01-01&page=1&per_page=10"
+```
