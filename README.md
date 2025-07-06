@@ -48,6 +48,7 @@ query parameters:
 - `earliest_created_date`: The date from which to filter repositories (format: `YYYY-MM-DD`)
 - `page`: The page number for pagination (default: `1`)
 - `per_page`: The number of repositories per page (default: `100`)
+
 Example request:
 ```sh
 curl "http://localhost:8000/search?language=python&earliest_created_date=2023-01-01&page=1&per_page=10"
